@@ -1,0 +1,27 @@
+//--------------------------------------------------------------
+//Fonts
+//--------------------------------------------------------------
+
+@font-face {
+  font-family: 'Red Ring';
+  src: url('../fonts/RedRing-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Ring';
+  src: url('../fonts/RedRing-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Ring';
+  src: url('../fonts/RedRing-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

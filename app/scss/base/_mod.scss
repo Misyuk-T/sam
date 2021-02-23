@@ -1,0 +1,67 @@
+//--------------------------------------------------------------
+//Fonts
+//--------------------------------------------------------------
+
+$main-font: 'Red Ring';
+
+//--------------------------------------------------------------
+//Fonts size
+//--------------------------------------------------------------
+
+$small-size: 12px;
+$describe-price: 13px;
+$main-size: 14px;
+$services-title: 18px;
+$intro-suptitle: 24px;
+$size-logo: 36px;
+$size-price: 39px;
+$intro-title: 72px;
+
+
+//--------------------------------------------------------------
+//Colors
+//--------------------------------------------------------------
+
+$white: #fff;
+$almost-white: #f4f5f9;
+$mostly-almost-white: #f1ebe7;
+$border-abilities: #e5e5e5;
+$ccc: #ccc;
+$some-grey: #cbc6c0;
+$grey-icons: #b3b3b3;
+$light-grey: #999999;
+$logo-grey: #4a4c55;
+$abilities-grey: #6a6a6a;
+$dark-grey: #3c3530;
+$services-bg: #1f1f1f;
+$black: #000;
+
+$orange: #e74b3b;
+$works-bg: #e74c3c;
+
+
+//--------------------------------------------------------------
+//Extends fonts
+//--------------------------------------------------------------
+
+
+//main title
+//--------------------------------------------------------------
+
+%content-title {
+  font-size: $size-logo;
+  letter-spacing: 4px;
+  color: $abilities-grey;
+  font-weight: 700;
+  font-family: 'Source Sans Pro';
+
+  text-transform: uppercase;
+
+  @media (max-width: 760px) {
+	font-size: 30px;
+
+	@media (max-width: 560px) {
+	  font-size: 28px;
+	}
+  }
+}

@@ -1,4 +1,24 @@
-.header-wrapper { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.container { width: 100%; max-width: calc(1280px + 15 * 2); margin: 0 auto; padding: 0 15px; }
+
+@font-face { font-family: 'Red Ring'; src: url("../fonts/RedRing-Bold.woff") format("woff"); font-weight: bold; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Red Ring'; src: url("../fonts/RedRing-Medium.woff") format("woff"); font-weight: 500; font-style: normal; font-display: swap; }
+
+@font-face { font-family: 'Red Ring'; src: url("../fonts/RedRing-Regular.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
+
+*, *:after, *:before { margin: 0; box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: 1; }
+
+a { text-decoration: none; outline: none; }
+
+li { list-style-type: none; }
+
+ul { margin-left: 0; padding-left: 0; }
+
+body { font-family: "Red Ring"; font-size: 14px; color: #000; background: #E5E5E5; word-break: break-word; }
+
+.header-wrapper { display: -ms-flexbox; display: flex; }
 
 .header-wrapper .logo { width: 500px; height: 500px; background-color: red; }
 
@@ -6,7 +26,7 @@
 
 @media screen and (min-width: 767px) { .header-wrapper .header-text { width: 500px; height: 500px; } }
 
-.blog-wrapper .blog-list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.blog-wrapper .blog-list { display: -ms-flexbox; display: flex; }
 
 .blog-wrapper .blog-list__item { width: 33.33%; height: 100px; margin: 0 10px; background: lightblue; }
 
