@@ -8,60 +8,113 @@ $main-font: 'Red Ring';
 //Fonts size
 //--------------------------------------------------------------
 
-$small-size: 12px;
-$describe-price: 13px;
+$size12: 12px;
+$size13: 13px;
 $main-size: 14px;
-$services-title: 18px;
-$intro-suptitle: 24px;
-$size-logo: 36px;
-$size-price: 39px;
-$intro-title: 72px;
-
+$size15: 15px;
+$size18: 18px;
+$size19: 19px;
+$size25: 25px;
+$size35: 35px;
+$size75: 75px;
 
 //--------------------------------------------------------------
 //Colors
 //--------------------------------------------------------------
 
 $white: #fff;
-$almost-white: #f4f5f9;
-$mostly-almost-white: #f1ebe7;
-$border-abilities: #e5e5e5;
-$ccc: #ccc;
-$some-grey: #cbc6c0;
-$grey-icons: #b3b3b3;
-$light-grey: #999999;
-$logo-grey: #4a4c55;
-$abilities-grey: #6a6a6a;
-$dark-grey: #3c3530;
-$services-bg: #1f1f1f;
 $black: #000;
-
-$orange: #e74b3b;
-$works-bg: #e74c3c;
+$green: #0ED193;
+$blue: #01A0BF;
+$light-grey: #E4ECEE;
+$grey: #ACBBBE;
 
 
 //--------------------------------------------------------------
 //Extends fonts
 //--------------------------------------------------------------
 
+%h1 {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size75;
+  line-height: 1.13;
+  color: $grey;
+}
 
-//main title
+%h2 {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size35;
+  line-height: 1.35;
+  color: $grey;
+}
+
+%h3 {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size25;
+  line-height: 1.33;
+  color: $grey;
+}
+
+%big-text {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size19;
+  line-height: 1.31;
+  color: $grey;
+}
+
+%regular-text {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: 300;
+  font-size: $size13;
+  line-height: 1.3;
+  color: $grey;
+}
+
+%medium-text {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: 300;
+  font-size: $size15;
+  line-height: 1.33;
+  color: $grey;
+}
+
+%regular-bold {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-size: $size13;
+  line-height: 1.15;
+  color: $grey;
+}
+
+%medium-bold {
+  font-family: 'Red Ring';
+  font-style: normal;
+  font-weight: 500;
+  font-size: $size15;
+  line-height: 1.33;
+}
+
+//--------------------------------------------------------------
+//Extends class
 //--------------------------------------------------------------
 
-%content-title {
-  font-size: $size-logo;
-  letter-spacing: 4px;
-  color: $abilities-grey;
-  font-weight: 700;
-  font-family: 'Source Sans Pro';
+.btn {
+  @extend %medium-bold;
+  min-width: 138px;
+  padding: 14px 35px;
 
-  text-transform: uppercase;
+  color: $white;
+  background: $green;
 
-  @media (max-width: 760px) {
-	font-size: 30px;
-
-	@media (max-width: 560px) {
-	  font-size: 28px;
-	}
-  }
+  border-radius: 5px;
 }
