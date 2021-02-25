@@ -12,6 +12,7 @@ $size12: 12px;
 $size13: 13px;
 $main-size: 14px;
 $size15: 15px;
+$size16: 15px;
 $size18: 18px;
 $size19: 19px;
 $size25: 25px;
@@ -28,6 +29,7 @@ $green: #0ED193;
 $blue: #01A0BF;
 $light-grey: #E4ECEE;
 $grey: #ACBBBE;
+$sea: #235660;
 
 
 //--------------------------------------------------------------
@@ -40,7 +42,17 @@ $grey: #ACBBBE;
   font-weight: 500;
   font-size: $size75;
   line-height: 1.13;
-  color: $grey;
+  color: $white;
+
+  @media (max-width: 1200px) {
+    font-size: 45px;
+  }
+  @media (max-width: 850px) {
+    font-size: 35px;
+  }
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
 }
 
 %h2 {
@@ -68,6 +80,13 @@ $grey: #ACBBBE;
   font-size: $size19;
   line-height: 1.31;
   color: $grey;
+
+  @media (max-width: 850px) {
+    font-size: 14px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 }
 
 %regular-text {
@@ -110,6 +129,8 @@ $grey: #ACBBBE;
 
 .btn {
   @extend %medium-bold;
+  display: inline-block;
+
   min-width: 138px;
   padding: 14px 35px;
 
@@ -117,4 +138,39 @@ $grey: #ACBBBE;
   background: $green;
 
   border-radius: 5px;
+
+  transition: all .2s;
+
+  @media (max-width: 600px) {
+    min-width: 50px;
+    padding: 14px 15px;
+  }
+
+  &:hover {
+    background: $sea;
+    transition: all .2s;
+  }
+}
+
+.btn-l {
+  padding: 16px 34px 20px;
+
+  @media (max-width: 600px) {
+    padding: 15px 14px;
+  }
+}
+
+
+// circle
+// ===============================
+
+.circle--top {
+  position: absolute;
+  border-radius: 50%;
+  border-right: 1px solid $sea;
+}
+.circle--bottom {
+  position: absolute;
+  border-radius: 50%;
+  border-left: 1px solid $sea;
 }
