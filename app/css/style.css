@@ -14,13 +14,23 @@
 
 @media (max-width: 600px) { .header-intro .container .header-inner .header-title { font-size: 25px; } }
 
+.advantages h2.advantages__main-title, .get-credit .container .credit-inner .credit-wrapper h2.credit-title, .credit-calculator h2.calculator-title { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 35px; line-height: 1.35; color: #000; }
+
+.advantages .advantages-wrapper .advantages-item h3.advantages-title, .credit-calculator .calculator-wrapper .calculator-input, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-money { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 25px; line-height: 1.33; color: #000; }
+
 .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-family: 'Red Ring'; font-style: normal; font-weight: normal; font-size: 19px; line-height: 1.31; color: #ACBBBE; }
 
 @media (max-width: 850px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-size: 14px; } }
 
 @media (max-width: 600px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-size: 12px; } }
 
-.btn { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 15px; line-height: 1.33; }
+.advantages .advantages-wrapper .advantages-item p.advantages-describe, .credit-calculator .calculator-wrapper .calculator-describe, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-title { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 13px; line-height: 1.3; color: #000; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 15px; line-height: 1.33; color: #ACBBBE; }
+
+.credit-calculator .calculator-wrapper .input-name { font-family: 'Red Ring'; font-style: normal; font-size: 13px; line-height: 1.15; color: #000; }
+
+.btn, .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 15px; line-height: 1.33; }
 
 .btn { display: inline-block; min-width: 138px; padding: 14px 35px; color: #fff; background: #0ED193; border-radius: 5px; transition: all .2s; }
 
@@ -46,7 +56,7 @@ li { list-style-type: none; }
 
 ul { margin-left: 0; padding-left: 0; }
 
-body { font-family: "Red Ring"; font-size: 14px; color: black; background: #E5E5E5; word-break: break-word; height: 4000px; }
+body { font-family: "Red Ring"; font-size: 14px; color: black; background: white; word-break: break-word; height: 4000px; }
 
 .header-intro { background: radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%); }
 
@@ -154,6 +164,10 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: #E5E5
 
 @media (max-width: 1060px) { .header-menu .header-nav .header-list { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; position: absolute; top: 25px; left: calc(-40vw + 75px); width: 40vw; height: 80vh; padding: 20px; -ms-transform: translateX(200%); transform: translateX(200%); background: #fff; border-radius: 10px; border: 1px solid #000; box-shadow: -2px 5px 10px -1px rgba(0, 0, 0, 0.75); transition: all .4s; overflow: hidden; z-index: 1011; } }
 
+@media (max-width: 750px) { .header-menu .header-nav .header-list { left: calc(-50vw + 75px); width: 50vw; } }
+
+@media (max-width: 600px) { .header-menu .header-nav .header-list { left: calc(-60vw + 75px); width: 60vw; } }
+
 .header-menu .header-nav .header-list .burger-list__item { -ms-transform: translateX(0) !important; transform: translateX(0) !important; }
 
 .header-menu .header-nav .header-list .list-item { margin: 10px 26px 0; }
@@ -202,5 +216,77 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: #E5E5
 .burger-item__rotate:nth-child(2) { -ms-transform: rotate(100deg); transform: rotate(100deg); opacity: 0; }
 
 .burger-item__rotate:last-child { position: relative; right: -5px; -ms-transform: rotate(45deg) translateY(-5px) translateX(-11px); transform: rotate(45deg) translateY(-5px) translateX(-11px); }
+
+.advantages { padding: 60px 0 65px; }
+
+.advantages h2.advantages__main-title { text-align: center; margin-bottom: 37px; }
+
+.advantages .advantages-wrapper { display: -ms-flexbox; display: flex; margin: 0 -10px; }
+
+.advantages .advantages-wrapper .advantages-item { width: calc(33.333% - 21px); margin: 0 10px; padding: 41px 50px 50px; background: #F0F5F6; }
+
+.advantages .advantages-wrapper .advantages-item h3.advantages-title { margin-bottom: 19px; }
+
+.get-credit { padding: 82px 0 307px; background: url("../img/get-credit/bcg-credit.png") center top no-repeat, radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%); color: #fff; }
+
+.get-credit .container .credit-inner .credit-wrapper h2.credit-title { color: #fff; text-align: center; margin-bottom: 44px; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; max-width: 895px; margin: 0 auto; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-one { margin-left: 30px; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-one .stage-number:after { width: 285px; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-inner { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 60px; height: 60px; margin: 0 55px 0 65px; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 40px; height: 40px; border: 3px solid #0ED193; border-radius: 50%; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-number { position: relative; display: block; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-number:after { content: ''; position: absolute; display: block; top: 40%; left: 245%; height: 3px; width: 300px; background: #0ED193; z-index: 100; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item__active { width: 60px; height: 60px; border: 10px solid rgba(14, 209, 147, 0.25); background: #0ED193; background-clip: padding-box; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { color: #fff; font-weight: 300; text-align: center; margin-top: 8px; max-width: 210px; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name__active { font-weight: bolder; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-two { padding-left: 17px; }
+
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-three .stage-number:after { display: none; }
+
+.credit-calculator { padding: 50px 0 0 108px; }
+
+.credit-calculator h2.calculator-title { color: #fff; text-align: center; margin-bottom: 27px; }
+
+.credit-calculator .calculator-wrapper { display: -ms-flexbox; display: flex; }
+
+.credit-calculator .calculator-wrapper .calculator-forms { width: 70%; }
+
+.credit-calculator .calculator-wrapper .range { margin: -1px auto 0; width: calc(100% - 10px); }
+
+.credit-calculator .calculator-wrapper .range .ui-state-default { width: 35px; height: 35px; margin-left: -17px; top: -17px; border-radius: 50%; border: 6px solid rgba(14, 209, 147, 0.25); background: #0ED193; background-clip: padding-box; }
+
+.credit-calculator .calculator-wrapper .range .ui-state-default:after { content: ''; display: block; position: relative; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 4px; height: 4px; border-radius: 50%; background: white; }
+
+.credit-calculator .calculator-wrapper .ui-slider { height: 1px; background: #E4ECEE; border: none; border-radius: 0; }
+
+.credit-calculator .calculator-wrapper .ui-slider-range { background: #0ED193; height: 2px; }
+
+.credit-calculator .calculator-wrapper .input-name { margin-top: 27px; }
+
+.credit-calculator .calculator-wrapper .calculator-input { margin-top: 12px; padding: 14px 0 17px 24px; height: 64px; width: 100%; outline: none; border: 1px solid #E4ECEE; border-radius: 5px; }
+
+.credit-calculator .calculator-wrapper .calculator-describe { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; margin-top: 11px; color: #fff; }
+
+.credit-calculator .calculator-wrapper .calculator-describe p.min-sum { display: block; }
+
+.credit-calculator .calculator-wrapper .calculator-confirm { text-align: center; margin: 0 0 0 auto; }
+
+.credit-calculator .calculator-wrapper .calculator-confirm .confirm-title { color: #fff; }
+
+.credit-calculator .calculator-wrapper .calculator-confirm .confirm-money { color: white; }
+
+.credit-calculator .calculator-wrapper .calculator-confirm .confirm-money:after { content: ''; display: block; margin: 0 auto; width: 129px; height: 2px; background: #fff; }
 
 /*# sourceMappingURL=style.css.map */

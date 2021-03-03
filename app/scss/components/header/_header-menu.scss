@@ -55,6 +55,14 @@
           overflow: hidden;
           z-index: 1011;
         }
+        @media (max-width: 750px) {
+          left: calc(-50vw + 75px);
+          width: 50vw;
+        }
+        @media (max-width: 600px) {
+          left: calc(-60vw + 75px);
+          width: 60vw;
+        }
 
         .burger-list__item {
             transform: translateX(0) !important;
@@ -180,7 +188,6 @@
       margin-left: 9px;
     }
   }
-
 
 //burger
 //==================

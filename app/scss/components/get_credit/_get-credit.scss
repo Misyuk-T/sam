@@ -1,0 +1,268 @@
+.get-credit {
+  padding: 82px 0 307px;
+
+  background: url("../img/get-credit/bcg-credit.png") center top no-repeat, radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%);
+  color: $white;
+
+  .container {
+    .credit-inner {
+      .credit-wrapper {
+
+        h2.credit-title {
+          @extend %h2;
+          color: $white;
+          text-align: center;
+
+          margin-bottom: 44px;
+        }
+
+        .credit-stages {
+          display: flex;
+          justify-content: space-between;
+
+          max-width: 895px;
+          margin: 0 auto;
+
+          .stage-one {
+            margin-left: 30px;
+
+            .stage-number {
+              &:after {
+
+                width: 285px;
+              }
+            }
+          }
+
+          .stage-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 60px;
+            height: 60px;
+
+            margin: 0 55px 0 65px;
+          }
+
+          .stage-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @extend %medium-bold;
+
+            width: 40px;
+            height: 40px;
+
+            border: 3px solid $green;
+            border-radius: 50%;
+          }
+
+          .stage-number {
+            position: relative;
+            display: block;
+
+            &:after {
+              content: '';
+              position: absolute;
+              display: block;
+
+              top: 40%;
+              left: 245%;
+
+              height: 3px;
+              width: 300px;
+
+              background: $green;
+              z-index: 100;
+
+            }
+          }
+
+          .stage-item__active {
+            width: 60px;
+            height: 60px;
+
+            border: 10px solid rgba(14, 209, 147, 0.25);
+            background: $green;
+            background-clip: padding-box;
+          }
+
+
+          .stage-name {
+            @extend %medium-text;
+            color: $white;
+            font-weight: 300;
+            text-align: center;
+
+            margin-top: 8px;
+            max-width: 210px;
+          }
+
+          .stage-name__active {
+            font-weight: bolder;
+          }
+          .stage-two {
+            padding-left: 17px;
+          }
+          .stage-three {
+            .stage-number {
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// calculator
+//===========================
+
+.credit-calculator {
+  padding: 50px 0 0 108px;
+
+  h2.calculator-title {
+    @extend %h2;
+    color: $white;
+    text-align: center;
+
+    margin-bottom: 27px;
+  }
+
+  .calculator-wrapper {
+    display: flex;
+    .calculator-forms {
+      width: 70%;
+      .sum-of-credit.forms-wrapper {
+        .input-price {}
+        .range-of-sum {}
+
+      }
+      .duration-of-credit.forms-wrapper {
+        .input-duration {}
+        .range-of-durations {}
+
+      }
+    }
+
+    //style of UI
+    //===================
+    .range {
+      margin: -1px auto 0;
+      width: calc(100% - 10px);
+
+      .ui-state-default {
+        width: 35px;
+        height: 35px;
+
+        margin-left: -17px;
+        top: -17px;
+
+        border-radius: 50%;
+        border: 6px solid rgba(14, 209, 147, 0.25);
+        background: $green;
+        background-clip: padding-box;
+
+        &:after {
+          content: '';
+          display: block;
+
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+
+          background: white;
+        }
+      }
+    }
+    .ui-slider {
+      height: 1px;
+      background: $light-grey;
+      border: none;
+      border-radius: 0;
+
+    }
+    .ui-slider-range {
+      background: $green;
+      height: 2px;
+    }
+    //========================
+
+    .input-name {
+      @extend %regular-bold;
+      margin-top: 27px;
+    }
+
+    .calculator-input {
+      @extend %h3;
+
+      margin-top: 12px;
+      padding: 14px 0 17px 24px;
+
+      height: 64px;
+      width: 100%;
+
+      outline: none;
+      border: 1px solid $light-grey;
+      border-radius: 5px;
+    }
+
+    .calculator-describe {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 11px;
+
+      @extend %regular-text;
+      color: $white;
+
+      p.min-sum {
+        display: block;
+      }
+    }
+    .calculator-confirm {
+
+      text-align: center;
+      margin: 0 0 0 auto;
+      .confirm-title {
+        @extend %regular-text;
+        color: $white;
+      }
+
+      .confirm-money {
+        @extend %h3;
+        color: white;
+
+          &:after {
+            content: '';
+            display: block;
+
+            margin: 0 auto;
+            width: 129px;
+            height: 2px;
+
+            background: $white;
+        }
+      }
+      .btn.btn-l.btn-confirm {}
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
