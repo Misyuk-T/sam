@@ -227,7 +227,9 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .advantages .advantages-wrapper .advantages-item h3.advantages-title { margin-bottom: 19px; }
 
-.get-credit { padding: 82px 0 307px; background: url("../img/get-credit/bcg-credit.png") center top no-repeat, radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%); color: #fff; }
+.get-credit { padding: 83px 0 287px; background: url("../img/get-credit/bcg-credit.png") center top no-repeat, radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%); color: #fff; }
+
+.get-credit .container .credit-inner { position: relative; }
 
 .get-credit .container .credit-inner .credit-wrapper h2.credit-title { color: #fff; text-align: center; margin-bottom: 44px; }
 
@@ -237,7 +239,7 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-one .stage-number:after { width: 285px; }
 
-.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-inner { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 60px; height: 60px; margin: 0 55px 0 65px; }
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-inner { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; position: relative; width: 60px; height: 60px; margin: 0 55px 0 65px; }
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 40px; height: 40px; border: 3px solid #0ED193; border-radius: 50%; }
 
@@ -247,7 +249,7 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item__active { width: 60px; height: 60px; border: 10px solid rgba(14, 209, 147, 0.25); background: #0ED193; background-clip: padding-box; }
 
-.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { color: #fff; font-weight: 300; text-align: center; margin-top: 8px; max-width: 210px; }
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { color: #fff; font-weight: 300; text-align: center; margin-top: 9px; max-width: 210px; }
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name__active { font-weight: bolder; }
 
@@ -255,38 +257,38 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-three .stage-number:after { display: none; }
 
-.credit-calculator { padding: 50px 0 0 108px; }
+body { background: red; }
 
-.credit-calculator h2.calculator-title { color: #fff; text-align: center; margin-bottom: 27px; }
+.credit-calculator { position: absolute; top: 275px; padding: 50px 110px 81px 108px; width: 100%; background: white; }
+
+.credit-calculator h2.calculator-title { color: #000; text-align: center; margin-bottom: 32px; }
 
 .credit-calculator .calculator-wrapper { display: -ms-flexbox; display: flex; }
 
 .credit-calculator .calculator-wrapper .calculator-forms { width: 70%; }
 
+.credit-calculator .calculator-wrapper .calculator-forms .duration-of-credit.forms-wrapper { margin-top: 32px; }
+
 .credit-calculator .calculator-wrapper .range { margin: -1px auto 0; width: calc(100% - 10px); }
 
 .credit-calculator .calculator-wrapper .range .ui-state-default { width: 35px; height: 35px; margin-left: -17px; top: -17px; border-radius: 50%; border: 6px solid rgba(14, 209, 147, 0.25); background: #0ED193; background-clip: padding-box; }
 
-.credit-calculator .calculator-wrapper .range .ui-state-default:after { content: ''; display: block; position: relative; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 4px; height: 4px; border-radius: 50%; background: white; }
+.credit-calculator .calculator-wrapper .range .ui-state-default:after { content: ''; display: block; position: relative; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 7px; height: 7px; border-radius: 50%; background: #fff; }
 
 .credit-calculator .calculator-wrapper .ui-slider { height: 1px; background: #E4ECEE; border: none; border-radius: 0; }
 
 .credit-calculator .calculator-wrapper .ui-slider-range { background: #0ED193; height: 2px; }
 
-.credit-calculator .calculator-wrapper .input-name { margin-top: 27px; }
+.credit-calculator .calculator-wrapper .calculator-input { margin-top: 10px; padding: 14px 0 17px 24px; height: 64px; width: 100%; outline: none; border: 1px solid #E4ECEE; border-radius: 5px; }
 
-.credit-calculator .calculator-wrapper .calculator-input { margin-top: 12px; padding: 14px 0 17px 24px; height: 64px; width: 100%; outline: none; border: 1px solid #E4ECEE; border-radius: 5px; }
-
-.credit-calculator .calculator-wrapper .calculator-describe { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; margin-top: 11px; color: #fff; }
+.credit-calculator .calculator-wrapper .calculator-describe { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; margin-top: 13px; }
 
 .credit-calculator .calculator-wrapper .calculator-describe p.min-sum { display: block; }
 
-.credit-calculator .calculator-wrapper .calculator-confirm { text-align: center; margin: 0 0 0 auto; }
+.credit-calculator .calculator-wrapper .calculator-confirm { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; padding-top: 7px; margin: 0 0 0 auto; }
 
-.credit-calculator .calculator-wrapper .calculator-confirm .confirm-title { color: #fff; }
+.credit-calculator .calculator-wrapper .calculator-confirm .confirm-title { margin: 11px 0; }
 
-.credit-calculator .calculator-wrapper .calculator-confirm .confirm-money { color: white; }
-
-.credit-calculator .calculator-wrapper .calculator-confirm .confirm-money:after { content: ''; display: block; margin: 0 auto; width: 129px; height: 2px; background: #fff; }
+.credit-calculator .calculator-wrapper .calculator-confirm .confirm-money:after { content: ''; display: block; margin: 31px auto 38px; width: 129px; height: 2px; background: #000; }
 
 /*# sourceMappingURL=style.css.map */

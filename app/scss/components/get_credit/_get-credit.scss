@@ -1,11 +1,12 @@
 .get-credit {
-  padding: 82px 0 307px;
+  padding: 83px 0 287px;
 
   background: url("../img/get-credit/bcg-credit.png") center top no-repeat, radial-gradient(70.23% 381.6% at 6.53% 10.52%, #0A2E37 36.32%, #000000 100%);
   color: $white;
 
   .container {
     .credit-inner {
+      position: relative;
       .credit-wrapper {
 
         h2.credit-title {
@@ -38,6 +39,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            position: relative;
 
             width: 60px;
             height: 60px;
@@ -89,14 +92,13 @@
             background-clip: padding-box;
           }
 
-
           .stage-name {
             @extend %medium-text;
             color: $white;
             font-weight: 300;
             text-align: center;
 
-            margin-top: 8px;
+            margin-top: 9px;
             max-width: 210px;
           }
 
@@ -121,31 +123,35 @@
 
 // calculator
 //===========================
+body {
+  background: red;
+}
 
 .credit-calculator {
-  padding: 50px 0 0 108px;
+  position: absolute;
+  top: 275px;
+
+  padding: 50px 110px 81px 108px;
+  width: 100%;
+
+  background: white;
 
   h2.calculator-title {
     @extend %h2;
-    color: $white;
+    color: $black;
     text-align: center;
 
-    margin-bottom: 27px;
+    margin-bottom: 32px;
   }
 
   .calculator-wrapper {
     display: flex;
+
     .calculator-forms {
       width: 70%;
-      .sum-of-credit.forms-wrapper {
-        .input-price {}
-        .range-of-sum {}
 
-      }
       .duration-of-credit.forms-wrapper {
-        .input-duration {}
-        .range-of-durations {}
-
+        margin-top: 32px;
       }
     }
 
@@ -176,11 +182,11 @@
           left: 50%;
           transform: translate3d(-50%, -50%, 0);
 
-          width: 4px;
-          height: 4px;
+          width: 7px;
+          height: 7px;
           border-radius: 50%;
 
-          background: white;
+          background: $white;
         }
       }
     }
@@ -199,13 +205,12 @@
 
     .input-name {
       @extend %regular-bold;
-      margin-top: 27px;
     }
 
     .calculator-input {
       @extend %h3;
 
-      margin-top: 12px;
+      margin-top: 10px;
       padding: 14px 0 17px 24px;
 
       height: 64px;
@@ -220,40 +225,42 @@
       display: flex;
       justify-content: space-between;
 
-      margin-top: 11px;
+      margin-top: 13px;
 
       @extend %regular-text;
-      color: $white;
 
       p.min-sum {
         display: block;
       }
     }
     .calculator-confirm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      text-align: center;
+      padding-top: 7px;
       margin: 0 0 0 auto;
+
       .confirm-title {
         @extend %regular-text;
-        color: $white;
+        margin: 11px 0;
       }
 
       .confirm-money {
         @extend %h3;
-        color: white;
 
           &:after {
             content: '';
             display: block;
 
-            margin: 0 auto;
+            margin: 31px auto 38px;
             width: 129px;
             height: 2px;
 
-            background: $white;
+            background: $black;
         }
       }
-      .btn.btn-l.btn-confirm {}
     }
   }
 }

@@ -98,7 +98,7 @@ $(document).ready(function () {
         min: 500000,
         max: 1000000,
         step: 50000,
-        value: 700000,
+        value: 1000000,
         slide: function (event, ui) {
             inputPrice.val(numberWithSpaces(ui.value) + (' ₽'));
         },
@@ -114,7 +114,7 @@ $(document).ready(function () {
         range: "min",
         min: 1,
         max: 12,
-        value: 3,
+        value: 5,
         slide: function (event, ui) {
             inputDuration.val(ui.value + (' мес.'));
         },
@@ -134,31 +134,34 @@ $(document).ready(function () {
 
     // значення інпута в слайдер + валідація
 
-    function keyUp(inputName, sliderName, min, max, size) {
+    function keyUp(inputName, sliderName, min, max, size, step) {
         let inputValue = inputName.val();
-        let sum = inputValue.replace(/\s/g, ''); //в інпуті лежить хуйня з пробілами зараз, я беру без пробілів цифри
+        let sum = inputValue.replace(/\s/g, ''); // беру без пробілів цифри
         let numbSum = parseInt(sum);
+        let roundSum = (Math.round(numbSum / step) * step)
 
-        if (numbSum < min) {              // це якщо дурачок введе мало цифр вони стануть моїм мінімумом
-            numbSum = min
-        } else if (isNaN(numbSum) === true) {  // це якщо дурачок не введе нічого
-            numbSum = min
-        } else if (numbSum > max) {
-            numbSum = max     // це якщо дурачок не введе багато цифр
+
+        if (roundSum < min) {              // це якщо дурачок введе мало цифр вони стануть моїм мінімумом
+            roundSum = min
+        } else if (isNaN(roundSum) === true) {  // це якщо дурачок не введе нічого
+            roundSum = min
+        } else if (roundSum > max) {
+            roundSum = max;     // це якщо дурачок не введе багато цифр
         }
-        sliderName.slider('value', numbSum);  // це я буду звертатись до кого жного слайдера через перемінну  sliderName
+
+        sliderName.slider('value', roundSum);  // це я буду звертатись до кого жного слайдера через перемінну  sliderName
 
         inputName.blur(function () {
-           inputName.val(numbSum + size);  // це валідая для самого інпута
+           inputName.val(numberWithSpaces(roundSum) + size);  // це валід для самого інпута
         })
     }
 
 
     inputPrice.keyup(function () {
-        keyUp(inputPrice, rangeSum, 500000, 1000000, ' ₽')
+        keyUp(inputPrice, rangeSum, 500000, 1000000, ' ₽', 50000)
     });
     inputDuration.keyup(function () {
-        keyUp(inputDuration, rangeDuration, 1, 12, ' мес.')
+        keyUp(inputDuration, rangeDuration, 1, 12, ' мес.', 1)
     });
 
 
