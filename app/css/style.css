@@ -14,7 +14,7 @@
 
 @media (max-width: 600px) { .header-intro .container .header-inner .header-title { font-size: 25px; } }
 
-.advantages h2.advantages__main-title, .get-credit .container .credit-inner .credit-wrapper h2.credit-title, .credit-calculator h2.calculator-title { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 35px; line-height: 1.35; color: #000; }
+.advantages h2.advantages__main-title, .get-credit .container .credit-inner .credit-wrapper h2.credit-title, .credit-calculator h2.calculator-title, .our-partners .container h2.partners-title { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 35px; line-height: 1.35; color: #000; }
 
 .advantages .advantages-wrapper .advantages-item h3.advantages-title, .credit-calculator .calculator-wrapper .calculator-input, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-money { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 25px; line-height: 1.33; color: #000; }
 
@@ -257,8 +257,6 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-three .stage-number:after { display: none; }
 
-body { background: red; }
-
 .credit-calculator { position: absolute; top: 275px; padding: 50px 110px 81px 108px; width: 100%; background: white; }
 
 .credit-calculator h2.calculator-title { color: #000; text-align: center; margin-bottom: 32px; }
@@ -290,5 +288,25 @@ body { background: red; }
 .credit-calculator .calculator-wrapper .calculator-confirm .confirm-title { margin: 11px 0; }
 
 .credit-calculator .calculator-wrapper .calculator-confirm .confirm-money:after { content: ''; display: block; margin: 31px auto 38px; width: 129px; height: 2px; background: #000; }
+
+.our-partners { padding: 314px 0 72px; background: #E4ECEE; }
+
+.our-partners .container h2.partners-title { padding-left: 75px; margin-bottom: 35px; text-align: center; }
+
+.our-partners .container h2.partners-title span { display: inline-block; margin-left: 20px; color: #0ED193; }
+
+.our-partners .container h2.partners-title span:after { content: ''; display: block; position: relative; top: -5px; width: 100%; border-bottom: 2px dashed #0ED193; }
+
+.our-partners .container .partners-wrapper { display: -ms-flexbox; display: flex; margin: 0 -8px; }
+
+.our-partners .container .partners-wrapper .partners-item { position: relative; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; margin: 0 8px; padding: 39px 22px; width: calc(100% / 7 - 8px); height: 121px; background: #fff; transition: all .2s; }
+
+.our-partners .container .partners-wrapper .partners-item:hover { background: #0ED193; transition: all .2s; }
+
+.our-partners .container .partners-wrapper .partners-item:hover .partners-svg { fill: #fff; transition: all .2s; }
+
+.our-partners .container .partners-wrapper .partners-item .partners-svg { display: inline-block; width: 100%; height: 100%; fill: #ACBBBE; transition: all .2s; }
+
+.our-partners .container .partners-wrapper .partners-item a { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
 
 /*# sourceMappingURL=style.css.map */
