@@ -79,7 +79,6 @@
       .header-slider {
         overflow: hidden;
 
-
         .header-carousel {
           display: flex;
           width: 300%;
@@ -149,9 +148,6 @@
           }
         }
       }
-
-      .btn-intro {
-      }
     }
 
     .bank-logo {
@@ -161,6 +157,15 @@
       @media (max-width: 850px) {
         transform: scale(0.8);
         top: 20px;
+      }
+      @media (max-width: 600px) {
+        transform: scale(0.6);
+        top: 10px;
+        right: -7%;
+      }
+      @media (max-width: 430px) {
+        top: 87%;
+        left: -7%;
       }
     }
 
@@ -188,11 +193,19 @@
       }
       @media (max-width: 600px) {
         transform: scale(0.45);
-        right: -220px;
         bottom: -52%;
       }
       @media (max-width: 470px) {
         right: -250px;
+      }
+      @media (max-width: 450px) {
+        transform: scale(0.4);
+        right: -270px;
+        bottom: -60%;
+      }
+      @media (max-width: 410px) {
+        transform: scale(0.35);
+        bottom: -63%;
       }
     }
   }
@@ -200,6 +213,11 @@
 
 //circles
 //===============================
+.circle--top {
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
 
 .first-circle {
   bottom: 0;
@@ -243,6 +261,12 @@
 }
 
 //==============
+
+.circle--bottom {
+  @media (max-width: 630px) {
+   display: none;
+  }
+}
 
 .fifth-circle {
   width: 250.56px;

@@ -17,6 +17,12 @@
   .header-logo {
     position: relative;
     top: 7px;
+
+    .header-img {
+      @media (max-width: 440px) {
+        width: 240px;
+      }
+    }
   }
 
   .header-nav {
@@ -25,6 +31,7 @@
 
     .burger-list {
       transform: translateX(0) !important;
+      transition: all .4s;
     }
 
       .header-list {
@@ -38,9 +45,9 @@
 
           position: absolute;
           top: 25px;
-          left: calc(-40vw + 75px);
+          left: calc(-50vw + 75px);
 
-          width: 40vw;
+          width: 50vw;
           height: 80vh;
           padding: 20px;
 
@@ -51,17 +58,24 @@
           border: 1px solid $black;
           box-shadow: -2px 5px 10px -1px rgba(0, 0, 0, 0.75);
 
-          transition: all .4s;
           overflow: hidden;
           z-index: 1011;
         }
         @media (max-width: 750px) {
-          left: calc(-50vw + 75px);
-          width: 50vw;
+          left: calc(-60vw + 75px);
+          width: 60vw;
         }
         @media (max-width: 600px) {
           left: calc(-60vw + 75px);
           width: 60vw;
+        }
+        @media (max-width: 500px) {
+          left: calc(-70vw + 75px);
+          width: 70vw;
+        }
+        @media (max-width: 440px) {
+          left: calc(-80vw + 75px);
+          width: 80vw;
         }
 
         .burger-list__item {

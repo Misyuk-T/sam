@@ -3,6 +3,25 @@
   padding: 314px 0 72px;
   background: $light-grey;
 
+  @media (max-width: 1280px) {
+    padding-top: 250px;
+}
+  @media (max-width: 1000px) {
+    padding-top: 200px;
+  }
+  @media (max-width: 850px) {
+    padding: 190px 0 42px;
+  }
+  @media (max-width: 650px) {
+    padding-top: 300px;
+  }
+  @media (max-width: 500px) {
+    padding-top: 270px;
+  }
+  @media (max-width: 420px) {
+    padding-top: 230px;
+  }
+
   .container {
 
     h2.partners-title {
@@ -11,6 +30,15 @@
       padding-left: 75px;
       margin-bottom: 35px;
       text-align: center;
+
+      @media (max-width: 1000px) {
+        margin-bottom: 0;
+        padding: 0;
+      }
+
+      @media (max-width: 450px) {
+        margin-bottom: 25px;
+      }
 
       span {
         display: inline-block;
@@ -32,6 +60,9 @@
 
     .partners-wrapper {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
       margin: 0 -8px;
 
       .partners-item {
@@ -44,11 +75,29 @@
         margin: 0 8px;
         padding: 39px 22px;
 
-        width: calc(100% / 7 - 8px);
+        width: calc(100% / 7 - 16px);
         height: 121px;
 
         background: $white;
         transition: all .2s;
+
+        @media (max-width: 1000px) {
+          width: calc(100% / 6 - 16px);
+          margin-top: 20px;
+        }
+        @media (max-width: 900px) {
+          width: calc(100% / 5 - 16px);
+        }
+        @media (max-width: 800px) {
+          width: calc(100% / 4 - 16px);
+        }
+        @media (max-width: 600px) {
+          width: calc(100% / 3 - 16px);
+        }
+        @media (max-width: 450px) {
+          width: calc(100% / 2 - 16px);
+          margin: 5px;
+        }
 
         &:hover {
           background: $green;

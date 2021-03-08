@@ -1,14 +1,19 @@
 
 .media-intro {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   .media-content {
     display: flex;
     width: 50%;
 
-    .video-wrapper {
-
+    @media (max-width: 750px) {
+      width: 90%;
     }
+    @media (max-width: 650px) {
+      width: 100%;
+    }}
 
     .video-player {
       position: relative;
@@ -20,6 +25,14 @@
       background: black;
 
       overflow: hidden;
+
+      @media (max-width: 1400px) {
+       height: 100%;
+      }
+
+      @media (max-width: 1130px) {
+        border: 2px solid $green;
+      }
 
       &:hover .player-nav {
         transform: translate3d(0, 0, 0);
@@ -54,7 +67,6 @@
         cursor: pointer;
 
         transition: all .3s;
-
 
         &:hover ~ .player-nav {
           display: block;
@@ -124,11 +136,9 @@
             fill: $green;
             transition: all .3s;
           }
-
         }
 
         .volume-icon {
-
           &:hover ~ .video-volume {
             width: 100px;
             transition: all .4s;
@@ -160,7 +170,6 @@
 
         .ui-slider {
           @extend %ui-slider-range-castom;
-
         }
 
         .ui-slider-range {
@@ -211,16 +220,7 @@
       .player-time {
         margin: 0 15px;
         color: white;
-
-        .current-time {
-
-        }
-
-        .max-time {
-
-        }
       }
-
 
       .player-nav-hide {
         display: none;
@@ -229,26 +229,57 @@
   }
 
   .media-text {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
-    padding: 91px 170px 0 120px;
+    padding-left: 120px;
 
     width: 50%;
     background: $green;
 
+    @media (max-width: 1300px) {
+      padding: 10px 15px 25px 60px;
+    }
+    @media (max-width: 850px) {
+      padding-left: 30px;
+    }
+    @media (max-width: 750px) {
+      text-align: center;
+      width: 90%;
+    }
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+
     h2.media-title {
+      display: inline-block;
+
+      max-width: 430px;
+      padding-top: 9px;
+
       @extend %h2;
       color: $white;
-      max-width: 430px;
+
+      @media (max-width: 750px) {
+        max-width: 100%;
+      }
     }
 
     p.media-describe {
+      display: inline-block;
+
+      margin: 17px 20px 0 0;
+
       @extend %regular-text;
-      line-height: 1.4;
+      line-height: 1.35;
       color: $white;
 
       max-width: 430px;
-      margin-top: 14px;
+
+      @media (max-width: 750px) {
+        max-width: 100%;
+      }
     }
   }
 }

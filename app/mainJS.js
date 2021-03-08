@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
     marginMenu();
 
-//burger
+//show/hide burger menu
 //===========================
     let burger = $(".burger");
     let burgerItem = $(".burger-item");
@@ -76,7 +76,6 @@ $(document).ready(function () {
 
         stageName.removeClass(stageNameActive);
         $(this).closest('.stages').find(stageName).addClass(stageNameActive);
-
     })
 
     //calculator
@@ -176,7 +175,8 @@ $(document).ready(function () {
 // button play/pause
 
     video.onloadedmetadata = function () {
-        console.log('metadata')   // запускаєм плеер тільки при отриманні метадати
+
+// запускаєм плеер тільки при отриманні метадати
 
         function triggerVideo() {
             if (video.paused || video.ended) {
@@ -215,10 +215,7 @@ $(document).ready(function () {
             triggerVideo();
             toggleMedia();
             playPauseSvg();
-            console.log('clock')
         })
-
-
 
 
 // volume slider
@@ -273,8 +270,6 @@ $(document).ready(function () {
                 video.volume = ui.value
                 volumeBeforeClick = ui.value
                 svgChange();
-
-                console.log(ui.value)
             },
             change: function (event, ui) {
                 video.volume = ui.value;
@@ -285,7 +280,6 @@ $(document).ready(function () {
         video.volume = videoVolume.slider("value")
         let volumeBeforeClick = videoVolume.slider('value');
         svgChange();
-
 
         btnVolume.click(function () {
             iconMuteUnmute();
@@ -332,10 +326,10 @@ $(document).ready(function () {
 
 
         video.onended = function () {
-            //video.currentTime = 0.1
             toggleMedia();
             playPauseSvg();
         }
+
 
 
     }//end player function
