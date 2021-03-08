@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-//fixed header
+//fixed header (margin-top for header intro)
 //===========================
 
     let headerIntro = $('.header-intro');
@@ -10,7 +10,6 @@ $(document).ready(function () {
     function marginMenu() {
         headerIntro.css({'padding-top': headerHeight})
     }
-
     marginMenu();
 
 //burger
