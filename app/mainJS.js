@@ -152,7 +152,7 @@ $(document).ready(function () {
         sliderName.slider('value', roundSum);  // це я буду звертатись до кого жного слайдера через перемінну  sliderName
 
         inputName.blur(function () {
-           inputName.val(numberWithSpaces(roundSum) + size);  // це валід для самого інпута
+            inputName.val(numberWithSpaces(roundSum) + size);  // це валід для самого інпута
         })
     }
 
@@ -165,4 +165,185 @@ $(document).ready(function () {
     });
 
 
+    //MEDIA PLAYER
+//===========================
+    let video = $('.video')[0];
+    let videoWindow = $('.video');
+    let btn = $('.video-btn');
+    let btnSvg = $('.play-svg')
+    let playIcon = $('.play-icon')
+
+
+// button play/pause
+
+    video.onloadedmetadata = function () {
+        console.log('metadata')   // запускаєм плеер тільки при отриманні метадати
+
+        function triggerVideo() {
+            if (video.paused || video.ended) {
+                video.play()
+            } else {
+                video.pause()
+            }
+        }
+
+        function playPauseSvg() {
+            if (video.paused || video.ended) {
+                btnSvg.attr({href: '#play'})
+            } else {
+                btnSvg.attr({href: '#pause'})
+            }
+        }
+
+        function toggleMedia() {
+            btn.toggleClass('video-btn-hide')
+            videoWindow.toggleClass('video-blur')
+        }
+
+        btn.click(function () {
+            triggerVideo();
+            toggleMedia();
+            playPauseSvg()
+        });
+
+        videoWindow.click(function () {
+            triggerVideo();
+            toggleMedia();
+            playPauseSvg();
+        })
+
+        playIcon.click(function () {
+            triggerVideo();
+            toggleMedia();
+            playPauseSvg();
+            console.log('clock')
+        })
+
+
+
+
+// volume slider
+
+        let videoVolume = $(".video-volume");
+        let videoDurationUI = $(".video-duration");
+        let spanTime = $(".current-time")
+        let spanMaxTime = $(".max-time")
+        let btnVolume = $('.volume-icon')
+        let volumeSvg = $(`.volume-svg`)
+
+            spanMaxTime.text(secondsToTime(video.duration));
+
+        function secondsToTime(time) {
+            let h = Math.floor(time / (60 * 60)),
+                dm = time % (60 * 60),
+                m = Math.floor(dm / 60),
+                ds = dm % 60,
+                s = Math.ceil(ds);
+            if (s === 60) {
+                s = 0;
+                m = m + 1;
+            }
+            if (s < 10) {
+                s = '0' + s;
+            }
+            if (m === 60) {
+                m = 0;
+                h = h + 1;
+            }
+            if (m < 10) {
+                m = '0' + m;
+            }
+            if (h === 0) {
+                fulltime = m + ':' + s;
+            } else {
+                fulltime = h + ':' + m + ':' + s;
+            }
+            return fulltime;
+        }
+
+// volume slider
+
+        videoVolume.slider({
+            animate: "fast",
+            range: "min",
+            min: 0,
+            max: 1,
+            step: 0.00001,
+            value: 0.5,
+            slide: function (event, ui) {
+                video.volume = ui.value
+                volumeBeforeClick = ui.value
+                svgChange();
+
+                console.log(ui.value)
+            },
+            change: function (event, ui) {
+                video.volume = ui.value;
+                svgChange();
+            }
+        });
+
+        video.volume = videoVolume.slider("value")
+        let volumeBeforeClick = videoVolume.slider('value');
+        svgChange();
+
+
+        btnVolume.click(function () {
+            iconMuteUnmute();
+            svgChange();
+        })
+
+        function iconMuteUnmute() {
+            if (videoVolume.slider('value') > 0) {
+                videoVolume.slider("value", 0);
+            } else {
+                videoVolume.slider("value", volumeBeforeClick);
+            }
+        }
+
+        function svgChange() {
+            if (video.volume === 0) {
+                volumeSvg.attr({href: `#volume-0`})
+            } else if (0.50 > video.volume > 0) {
+                volumeSvg.attr({href: `#volume-1`})
+            } else {
+                volumeSvg.attr({href: `#volume-2`})
+            }
+        }
+
+// duration slider
+
+        videoDurationUI.slider({
+            animate: "fast",
+            range: "min",
+            min: 0,
+            max: video.duration,
+            step: 0.01,
+            value: 0,
+            slide: function (event, ui) {
+                spanTime.text(secondsToTime(videoDurationUI.slider("value")));
+                video.currentTime = ui.value
+            }
+        });
+
+        video.ontimeupdate = function () {
+            videoDurationUI.slider('value', this.currentTime)
+            spanTime.text(secondsToTime(videoDurationUI.slider("value")));
+        };
+
+
+        video.onended = function () {
+            //video.currentTime = 0.1
+            toggleMedia();
+            playPauseSvg();
+        }
+
+
+    }//end player function
 }); //end
+
+
+
+
+
+

@@ -14,7 +14,7 @@
 
 @media (max-width: 600px) { .header-intro .container .header-inner .header-title { font-size: 25px; } }
 
-.advantages h2.advantages__main-title, .get-credit .container .credit-inner .credit-wrapper h2.credit-title, .credit-calculator h2.calculator-title, .our-partners .container h2.partners-title { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 35px; line-height: 1.35; color: #000; }
+.advantages h2.advantages__main-title, .get-credit .container .credit-inner .credit-wrapper h2.credit-title, .credit-calculator h2.calculator-title, .our-partners .container h2.partners-title, .media-intro .media-text h2.media-title { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 35px; line-height: 1.35; color: #000; }
 
 .advantages .advantages-wrapper .advantages-item h3.advantages-title, .credit-calculator .calculator-wrapper .calculator-input, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-money { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 25px; line-height: 1.33; color: #000; }
 
@@ -24,7 +24,7 @@
 
 @media (max-width: 600px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-size: 12px; } }
 
-.advantages .advantages-wrapper .advantages-item p.advantages-describe, .credit-calculator .calculator-wrapper .calculator-describe, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-title { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 13px; line-height: 1.3; color: #000; }
+.advantages .advantages-wrapper .advantages-item p.advantages-describe, .credit-calculator .calculator-wrapper .calculator-describe, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-title, .media-intro .media-text p.media-describe { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 13px; line-height: 1.3; color: #000; }
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 15px; line-height: 1.33; color: #ACBBBE; }
 
@@ -32,7 +32,7 @@
 
 .btn, .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 15px; line-height: 1.33; }
 
-.btn { display: inline-block; min-width: 138px; padding: 14px 35px; color: #fff; background: #0ED193; border-radius: 5px; transition: all .2s; }
+.btn { display: inline-block; min-width: 138px; padding: 14px 35px; color: #fff; background: #0ed193; border-radius: 5px; transition: all .2s; }
 
 @media (max-width: 600px) { .btn { min-width: 50px; padding: 14px 15px; } }
 
@@ -45,6 +45,14 @@
 .circle--top { position: absolute; border-radius: 50%; border-right: 1px solid #235660; }
 
 .circle--bottom { position: absolute; border-radius: 50%; border-left: 1px solid #235660; }
+
+.credit-calculator .calculator-wrapper .range .ui-state-default, .media-intro .media-content .video-player .video-duration .ui-state-default { width: 35px; height: 35px; margin-left: -17px; top: -17px; border-radius: 50%; border: 6px solid rgba(14, 209, 147, 0.25); background: #0ed193; background-clip: padding-box; }
+
+.credit-calculator .calculator-wrapper .range .ui-state-default:after, .media-intro .media-content .video-player .video-duration .ui-state-default:after { content: ''; display: block; position: relative; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+
+.credit-calculator .calculator-wrapper .ui-slider { height: 1px; background: #E4ECEE; border: none; border-radius: 0; }
+
+.credit-calculator .calculator-wrapper .ui-slider-range, .media-intro .media-content .video-player .video-volume .ui-slider, .media-intro .media-content .video-player .video-duration .ui-slider, .media-intro .media-content .video-player .video-duration .ui-slider-range { background: #0ed193; height: 2px; }
 
 *, *:after, *:before { margin: 0; box-sizing: border-box; }
 
@@ -76,7 +84,7 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .header-intro .container .header-inner .header-review ul.review-list { display: -ms-flexbox; display: flex; }
 
-.header-intro .container .header-inner .header-review ul.review-list li.review-item:not(:last-child) { padding-right: 24px; border-right: 2px solid #0ED193; }
+.header-intro .container .header-inner .header-review ul.review-list li.review-item:not(:last-child) { padding-right: 24px; border-right: 2px solid #0ed193; }
 
 .header-intro .container .header-inner .header-review ul.review-list li.review-item:not(:first-child) { margin-left: 24px; }
 
@@ -112,7 +120,7 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; }
 
-.header-intro .container .header-inner .header-offer ul.condition-offer .offer-item:before { content: ''; display: block; height: 9px; width: 9px; margin-right: 10px; border-radius: 50%; background: #0ED193; }
+.header-intro .container .header-inner .header-offer ul.condition-offer .offer-item:before { content: ''; display: block; height: 9px; width: 9px; margin-right: 10px; border-radius: 50%; background: #0ed193; }
 
 .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-weight: 300; color: #fff; }
 
@@ -181,13 +189,13 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 @media (max-width: 1060px) { .header-menu .header-nav .header-list .list-item a { display: inline-block; padding: 20px; width: 100%; text-align: center; color: #000; text-transform: uppercase; }
   .header-menu .header-nav .header-list .list-item a:hover { background: #E4ECEE; } }
 
-.header-menu .header-nav .header-list .list-item a:after { content: ''; position: absolute; display: block; height: 2px; width: 0; background: #0ED193; pointer-events: none; transition: all .2s; }
+.header-menu .header-nav .header-list .list-item a:after { content: ''; position: absolute; display: block; height: 2px; width: 0; background: #0ed193; pointer-events: none; transition: all .2s; }
 
 @media (max-width: 1060px) { .header-menu .header-nav .header-list .list-item a:after { display: none; } }
 
 .header-menu .header-nav .header-list .list-item a:hover:after { width: 100%; transition: all .6s; }
 
-.header-menu .header-nav .header-list .mobile-btn { display: none; padding: 20px; min-width: 80%; font-family: "Red Ring"; font-size: 14px; text-align: center; text-transform: uppercase; color: #fff; background: #0ED193; border-radius: 5px; transition: all .2s; }
+.header-menu .header-nav .header-list .mobile-btn { display: none; padding: 20px; min-width: 80%; font-family: "Red Ring"; font-size: 14px; text-align: center; text-transform: uppercase; color: #fff; background: #0ed193; border-radius: 5px; transition: all .2s; }
 
 @media (max-width: 1060px) { .header-menu .header-nav .header-list .mobile-btn { display: block; } }
 
@@ -241,13 +249,13 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-inner { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; position: relative; width: 60px; height: 60px; margin: 0 55px 0 65px; }
 
-.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 40px; height: 40px; border: 3px solid #0ED193; border-radius: 50%; }
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 40px; height: 40px; border: 3px solid #0ed193; border-radius: 50%; }
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-number { position: relative; display: block; }
 
-.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-number:after { content: ''; position: absolute; display: block; top: 40%; left: 245%; height: 3px; width: 300px; background: #0ED193; z-index: 100; }
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-number:after { content: ''; position: absolute; display: block; top: 40%; left: 245%; height: 3px; width: 300px; background: #0ed193; z-index: 100; }
 
-.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item__active { width: 60px; height: 60px; border: 10px solid rgba(14, 209, 147, 0.25); background: #0ED193; background-clip: padding-box; }
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item__active { width: 60px; height: 60px; border: 10px solid rgba(14, 209, 147, 0.25); background: #0ed193; background-clip: padding-box; }
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { color: #fff; font-weight: 300; text-align: center; margin-top: 9px; max-width: 210px; }
 
@@ -269,14 +277,6 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .credit-calculator .calculator-wrapper .range { margin: -1px auto 0; width: calc(100% - 10px); }
 
-.credit-calculator .calculator-wrapper .range .ui-state-default { width: 35px; height: 35px; margin-left: -17px; top: -17px; border-radius: 50%; border: 6px solid rgba(14, 209, 147, 0.25); background: #0ED193; background-clip: padding-box; }
-
-.credit-calculator .calculator-wrapper .range .ui-state-default:after { content: ''; display: block; position: relative; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 7px; height: 7px; border-radius: 50%; background: #fff; }
-
-.credit-calculator .calculator-wrapper .ui-slider { height: 1px; background: #E4ECEE; border: none; border-radius: 0; }
-
-.credit-calculator .calculator-wrapper .ui-slider-range { background: #0ED193; height: 2px; }
-
 .credit-calculator .calculator-wrapper .calculator-input { margin-top: 10px; padding: 14px 0 17px 24px; height: 64px; width: 100%; outline: none; border: 1px solid #E4ECEE; border-radius: 5px; }
 
 .credit-calculator .calculator-wrapper .calculator-describe { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; margin-top: 13px; }
@@ -293,20 +293,80 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 .our-partners .container h2.partners-title { padding-left: 75px; margin-bottom: 35px; text-align: center; }
 
-.our-partners .container h2.partners-title span { display: inline-block; margin-left: 20px; color: #0ED193; }
+.our-partners .container h2.partners-title span { display: inline-block; margin-left: 20px; color: #0ed193; }
 
-.our-partners .container h2.partners-title span:after { content: ''; display: block; position: relative; top: -5px; width: 100%; border-bottom: 2px dashed #0ED193; }
+.our-partners .container h2.partners-title span:after { content: ''; display: block; position: relative; top: -5px; width: 100%; border-bottom: 2px dashed #0ed193; }
 
 .our-partners .container .partners-wrapper { display: -ms-flexbox; display: flex; margin: 0 -8px; }
 
 .our-partners .container .partners-wrapper .partners-item { position: relative; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; margin: 0 8px; padding: 39px 22px; width: calc(100% / 7 - 8px); height: 121px; background: #fff; transition: all .2s; }
 
-.our-partners .container .partners-wrapper .partners-item:hover { background: #0ED193; transition: all .2s; }
+.our-partners .container .partners-wrapper .partners-item:hover { background: #0ed193; transition: all .2s; }
 
 .our-partners .container .partners-wrapper .partners-item:hover .partners-svg { fill: #fff; transition: all .2s; }
 
 .our-partners .container .partners-wrapper .partners-item .partners-svg { display: inline-block; width: 100%; height: 100%; fill: #ACBBBE; transition: all .2s; }
 
 .our-partners .container .partners-wrapper .partners-item a { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+
+.media-intro { display: -ms-flexbox; display: flex; }
+
+.media-intro .media-content { display: -ms-flexbox; display: flex; width: 50%; }
+
+.media-intro .media-content .video-player { position: relative; max-width: 719px; height: 416px; margin: 0 0 0 auto; background: black; overflow: hidden; }
+
+.media-intro .media-content .video-player:hover .player-nav { transform: translate3d(0, 0, 0); transition: all .3s; }
+
+.media-intro .media-content .video-player .video { display: block; max-height: 420px; -o-object-fit: cover; object-fit: cover; opacity: 1; transition: all .3s; }
+
+.media-intro .media-content .video-player .video:hover ~ .player-nav { display: -ms-flexbox; display: flex; }
+
+.media-intro .media-content .video-player .video-blur { opacity: 0.7; transition: all .3s; }
+
+.media-intro .media-content .video-player .video-btn { position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); color: black; cursor: pointer; transition: all .3s; }
+
+.media-intro .media-content .video-player .video-btn:hover ~ .player-nav { display: block; }
+
+.media-intro .media-content .video-player .video-btn-hide { left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); pointer-events: none; opacity: 0; transition: all .3s; }
+
+.media-intro .media-content .video-player .player-nav { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; position: absolute; top: calc(100% - 45px); width: 100%; height: 45px; transform: translate3d(0, 120%, 0); background: rgba(1, 1, 1, 0.3); transition: all .3s; }
+
+.media-intro .media-content .video-player .player-nav:hover { display: block; }
+
+.media-intro .media-content .video-player .player-nav .nav-wrapper { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; margin-top: 10px; }
+
+.media-intro .media-content .video-player .player-nav .nav-wrapper:hover .video-volume { width: 100px; transition: all .4s; }
+
+.media-intro .media-content .video-player .player-nav .player-svg { display: block; height: 24px; width: 24px; padding: 4px; margin-left: 6px; fill: #E4ECEE; background: rgba(1, 1, 1, 0.3); border-radius: 50%; cursor: pointer; z-index: 2; transition: all .3s; }
+
+.media-intro .media-content .video-player .player-nav .player-svg:hover { fill: #0ed193; transition: all .3s; }
+
+.media-intro .media-content .video-player .player-nav .volume-icon:hover ~ .video-volume { width: 100px; transition: all .4s; }
+
+.media-intro .media-content .video-player .video-volume { display: block; width: 0; height: 8px; margin-left: 5px; cursor: pointer; transition: all .4s; background: #E4ECEE; border: 0; }
+
+.media-intro .media-content .video-player .video-volume:hover { transition: all .4s; width: 100px; }
+
+.media-intro .media-content .video-player .video-volume .ui-state-default { display: none; }
+
+.media-intro .media-content .video-player .video-volume .ui-slider-range { background: #0ed193; width: 8px; }
+
+.media-intro .media-content .video-player .video-duration { position: relative; top: -2px; height: 5px; width: 100%; margin: 0 auto; cursor: pointer; }
+
+.media-intro .media-content .video-player .video-duration .ui-state-default { top: -9px; margin-left: -10px; height: 20px; width: 20px; border: 3px solid rgba(14, 209, 147, 0.25); cursor: pointer; }
+
+.media-intro .media-content .video-player .video-duration .ui-state-default:after { display: none; }
+
+.media-intro .media-content .video-player .video-duration .ui-slider-range { height: 5px; top: -1px; left: -2px; }
+
+.media-intro .media-content .video-player .player-time { margin: 0 15px; color: white; }
+
+.media-intro .media-content .video-player .player-nav-hide { display: none; }
+
+.media-intro .media-text { text-align: left; padding: 91px 170px 0 120px; width: 50%; background: #0ed193; }
+
+.media-intro .media-text h2.media-title { color: #fff; max-width: 430px; }
+
+.media-intro .media-text p.media-describe { line-height: 1.4; color: #fff; max-width: 430px; margin-top: 14px; }
 
 /*# sourceMappingURL=style.css.map */

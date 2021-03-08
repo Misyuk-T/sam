@@ -25,7 +25,7 @@ $size75: 75px;
 
 $white: #fff;
 $black: #000;
-$green: #0ED193;
+$green: #0ed193;
 $blue: #01A0BF;
 $light-grey: #E4ECEE;
 $grey: #ACBBBE;
@@ -175,8 +175,50 @@ $sea: #235660;
   border-left: 1px solid $sea;
 }
 
+// ui slider
+// ===============================
 
 
+%ui-state-default-castom {
+  width: 35px;
+  height: 35px;
+
+  margin-left: -17px;
+  top: -17px;
+
+  border-radius: 50%;
+  border: 6px solid rgba(14, 209, 147, 0.25);
+  background: $green;
+  background-clip: padding-box;
+
+  &:after {
+    content: '';
+    display: block;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+
+    background: $white;
+  }
+}
+
+%ui-slider-castom {
+  height: 1px;
+  background: $light-grey;
+  border: none;
+  border-radius: 0;
+
+}
+%ui-slider-range-castom {
+  background: $green;
+  height: 2px;
+}
 
 
 

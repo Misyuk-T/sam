@@ -158,44 +158,14 @@
       width: calc(100% - 10px);
 
       .ui-state-default {
-        width: 35px;
-        height: 35px;
-
-        margin-left: -17px;
-        top: -17px;
-
-        border-radius: 50%;
-        border: 6px solid rgba(14, 209, 147, 0.25);
-        background: $green;
-        background-clip: padding-box;
-
-        &:after {
-          content: '';
-          display: block;
-
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate3d(-50%, -50%, 0);
-
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-
-          background: $white;
-        }
+        @extend %ui-state-default-castom;
       }
     }
     .ui-slider {
-      height: 1px;
-      background: $light-grey;
-      border: none;
-      border-radius: 0;
-
+      @extend %ui-slider-castom;
     }
     .ui-slider-range {
-      background: $green;
-      height: 2px;
+      @extend %ui-slider-range-castom;
     }
     //========================
 
