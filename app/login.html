@@ -17,7 +17,9 @@
         <div class="container">
             <div class="header-menu">
                 <div class="header-logo">
-                    <img src="img/header/logo.png" alt="#" class="header-img">
+                    <a href="index.html">
+                        <img src="img/header/logo.png" alt="#" class="header-img">
+                    </a>
                 </div>
                 <div class="header-nav">
                     <ul class="header-list">
@@ -52,9 +54,42 @@
     </header>
 
 
+    <!--login forms
+    ==============================-->
+    <div class="container">
+        <div class="login">
+            <form class="login-wrapper">
+                <div class="btns-switch">
+                    <div class="btn-switch">
+                        <a href="#" class="switch-sign">
+                            <span>Вход</span>
+                        </a>
+                    </div>
+                    <div class="btn-switch">
+                        <a href="#" class="switch-sign">
+                            <span>Регистрация</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="email" class="username" id="username" required maxlength="40" minlength="5" placeholder="youremail@example.com" autocomplete="off">
+                    <label for="username">Ваш email</label>
+                </div>
+                <div class="input-container">
+                    <input type="password" class="password" id="password" required autocomplete="current-password" maxlength="30" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать одну цифру одну заглавную букву и быть не короче 8 символов">
+                    <label for="password">Ваш пароль</label>
+                </div>
+                <div class="login-confirm">
+                    <input type="checkbox" id="check-home">
+                    <label for="check-home">Запомнить этот комп'ютер?</label>
+
+                    <button type="submit" class="btn">Войти</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <!--footer
     ==============================-->
-
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-wrapper">
@@ -116,9 +151,6 @@
     </footer>
 
     <script src="jquery-3.5.1.min.js"></script>
-    <!-- 2. Подключим jQuery UI -->
-    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
     <script src="mainJS.js"></script>
 </div>
 </body>

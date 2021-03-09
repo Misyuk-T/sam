@@ -87,9 +87,9 @@ $sea: #235660;
   font-weight: normal;
   font-size: $size19;
   line-height: 1.31;
-  color: $grey;
+  color: $black;
 
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     font-size: 14px;
   }
   @media (max-width: 600px) {
@@ -124,6 +124,9 @@ $sea: #235660;
   @media (max-width: 930px) {
     font-size: $size13;
   }
+  @media (max-width: 450px) {
+    font-size: $size11;
+  }
 }
 
 %regular-bold {
@@ -140,6 +143,13 @@ $sea: #235660;
   font-weight: 500;
   font-size: $size15;
   line-height: 1.33;
+
+  @media (max-width: 850px) {
+    font-size: 14px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 }
 
 //--------------------------------------------------------------

@@ -24,11 +24,11 @@
 
 @media (max-width: 850px) { .advantages .advantages-wrapper .advantages-item h3.advantages-title, .credit-calculator .calculator-wrapper .calculator-input, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-money { font-size: 18px; } }
 
-.header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-family: 'Red Ring'; font-style: normal; font-weight: normal; font-size: 19px; line-height: 1.31; color: #ACBBBE; }
+.header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span, .container .login-wrapper .input-container input { font-family: 'Red Ring'; font-style: normal; font-weight: normal; font-size: 19px; line-height: 1.31; color: #000; }
 
-@media (max-width: 850px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-size: 14px; } }
+@media (max-width: 800px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span, .container .login-wrapper .input-container input { font-size: 14px; } }
 
-@media (max-width: 600px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span { font-size: 12px; } }
+@media (max-width: 600px) { .header-intro .container .header-inner .header-offer ul.condition-offer .offer-item span, .container .login-wrapper .input-container input { font-size: 12px; } }
 
 .advantages .advantages-wrapper .advantages-item p.advantages-describe, .credit-calculator .calculator-wrapper .calculator-describe, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-title, .media-text p.media-describe, footer.footer .footer-container .footer-wrapper .footer-item.footer-addresses .addresses-inner a.addresses-link, footer.footer .footer-container .footer-wrapper .footer-item.footer-rights p.rights-text { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 13px; line-height: 1.3; color: #000; }
 
@@ -36,13 +36,19 @@
 
 @media (max-width: 500px) { .advantages .advantages-wrapper .advantages-item p.advantages-describe, .credit-calculator .calculator-wrapper .calculator-describe, .credit-calculator .calculator-wrapper .calculator-confirm .confirm-title, .media-text p.media-describe, footer.footer .footer-container .footer-wrapper .footer-item.footer-addresses .addresses-inner a.addresses-link, footer.footer .footer-container .footer-wrapper .footer-item.footer-rights p.rights-text { font-size: 11px; } }
 
-.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 15px; line-height: 1.33; color: #ACBBBE; }
+.get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name, .container .login-wrapper .input-container label { font-family: 'Red Ring'; font-style: normal; font-weight: 300; font-size: 15px; line-height: 1.33; color: #ACBBBE; }
 
-@media (max-width: 930px) { .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name { font-size: 13px; } }
+@media (max-width: 930px) { .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name, .container .login-wrapper .input-container label { font-size: 13px; } }
+
+@media (max-width: 450px) { .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-name, .container .login-wrapper .input-container label { font-size: 11px; } }
 
 .credit-calculator .calculator-wrapper .input-name, footer.footer .footer-container .footer-wrapper .footer-item.footer-nav ul.footer-list li.footer-list-item { font-family: 'Red Ring'; font-style: normal; font-size: 13px; line-height: 1.15; color: #000; }
 
-.btn, .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 15px; line-height: 1.33; }
+.btn, .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item, .container .login-wrapper .btns-switch .btn-switch .switch-sign span { font-family: 'Red Ring'; font-style: normal; font-weight: 500; font-size: 15px; line-height: 1.33; }
+
+@media (max-width: 850px) { .btn, .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item, .container .login-wrapper .btns-switch .btn-switch .switch-sign span { font-size: 14px; } }
+
+@media (max-width: 600px) { .btn, .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-item, .container .login-wrapper .btns-switch .btn-switch .switch-sign span { font-size: 12px; } }
 
 .btn { display: inline-block; min-width: 138px; padding: 14px 35px; color: #fff; background: #0ed193; border-radius: 5px; transition: all .2s; }
 
@@ -297,7 +303,7 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 @media (max-width: 930px) { .get-credit .container .credit-inner .credit-wrapper .credit-stages { -ms-flex-pack: center; justify-content: center; } }
 
-@media (max-width: 930px) { .get-credit .container .credit-inner .credit-wrapper .credit-stages .stages { margin: 0 5px; } }
+@media (max-width: 930px) { .get-credit .container .credit-inner .credit-wrapper .credit-stages .stages { margin: 0 8px; } }
 
 .get-credit .container .credit-inner .credit-wrapper .credit-stages .stage-one { margin-left: 30px; }
 
@@ -343,11 +349,7 @@ body { font-family: "Red Ring"; font-size: 14px; color: black; background: white
 
 @media (max-width: 650px) { .credit-calculator { padding: 30px 0; } }
 
-@media (max-width: 480px) { .credit-calculator { padding: 20px 0; } }
-
-@media (max-width: 480px) { .credit-calculator { top: 220px; } }
-
-@media (max-width: 930px) { .credit-calculator { top: 240px; } }
+@media (max-width: 450px) { .credit-calculator { top: 220px; padding: 20px 0; } }
 
 .credit-calculator h2.calculator-title { color: #000; text-align: center; margin-bottom: 32px; }
 
@@ -603,5 +605,73 @@ footer.footer .footer-container .footer-wrapper .footer-item.footer-rights img.f
 @media (max-width: 900px) { footer.footer .footer-container .footer-wrapper .footer-item.footer-rights img.footer-bank { top: 0; } }
 
 footer.footer .footer-container .footer-wrapper .footer-item { margin: 0 22px; }
+
+.container .login { display: -ms-flexbox; display: flex; margin: 180px 0 40px; }
+
+.container .login-wrapper { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; width: 700px; margin: 0 auto; padding: 30px; background: #E4ECEE; border-radius: 20px; }
+
+@media (max-width: 800px) { .container .login-wrapper { width: 90%; } }
+
+@media (max-width: 600px) { .container .login-wrapper { width: 100%; padding: 20px; } }
+
+.container .login-wrapper .btns-switch { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; width: 100%; margin-bottom: 90px; }
+
+@media (max-width: 1100px) { .container .login-wrapper .btns-switch { margin-bottom: 60px; } }
+
+.container .login-wrapper .btns-switch .btn-switch { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; position: relative; width: 20%; height: 150%; border: 1px solid #333; -webkit-tap-highlight-color: transparent; z-index: 0; transition: 0.5s; cursor: pointer; }
+
+@media (max-width: 800px) { .container .login-wrapper .btns-switch .btn-switch { width: 110px; height: 30px; } }
+
+.container .login-wrapper .btns-switch .btn-switch::before, .container .login-wrapper .btns-switch .btn-switch::after { content: ''; position: absolute; background: #E4ECEE; z-index: -1; transition: 0.5s; }
+
+.container .login-wrapper .btns-switch .btn-switch::before { height: 110%; width: 70%; }
+
+.container .login-wrapper .btns-switch .btn-switch::after { width: 102%; height: 70%; }
+
+.container .login-wrapper .btns-switch .btn-switch:hover { background: #fff; }
+
+.container .login-wrapper .btns-switch .btn-switch:hover::before { width: 0; background: #fff; }
+
+.container .login-wrapper .btns-switch .btn-switch:hover::after { height: 0; background: #fff; }
+
+.container .login-wrapper .btns-switch .btn-switch .switch-sign { color: #000; }
+
+.container .login-wrapper .btns-switch .btn-switch .switch-sign span { text-transform: uppercase; -webkit-user-select: none; -ms-user-select: none; user-select: none; }
+
+@media (max-width: 800px) { .container .login-wrapper .btns-switch .btn-switch .switch-sign span { font-size: 13px; } }
+
+.container .login-wrapper .input-container { position: relative; width: 90%; margin: 0 auto 60px; }
+
+@media (max-width: 800px) { .container .login-wrapper .input-container { width: 100%; margin-bottom: 30px; } }
+
+.container .login-wrapper .input-container input { display: block; width: 100%; height: 64px; padding-left: 15px; font-weight: 300; color: #000; outline: none; border: 1px solid #E4ECEE; border-radius: 5px; transition: all .2s; }
+
+@media (max-width: 800px) { .container .login-wrapper .input-container input { height: 44px; } }
+
+.container .login-wrapper .input-container input:hover { border: 1px solid #000; }
+
+.container .login-wrapper .input-container input:focus ~ label { top: -50%; left: -2%; color: #000; transition: all .4s; }
+
+@media (max-width: 800px) { .container .login-wrapper .input-container input:focus ~ label { top: -60%; } }
+
+.container .login-wrapper .input-container input:focus:invalid { border: 1px solid red; transition: all .2s; }
+
+.container .login-wrapper .input-container input:valid { border: 1px solid #0ed193; transition: all .2s; }
+
+.container .login-wrapper .input-container label { display: inline-block; position: absolute; top: -20%; left: 0; padding: 3px 15px; margin: 0 0 2px 25px; color: black; font-size: 16px; background: #0ed193; border-radius: 5px; transition: all .4s; }
+
+@media (max-width: 800px) { .container .login-wrapper .input-container label { font-size: 12px; top: -30%; } }
+
+.container .login-wrapper .login-confirm { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: left; justify-content: left; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 auto 0 0; width: 100%; }
+
+.container .login-wrapper .login-confirm label { margin-left: 5px; }
+
+@media (max-width: 500px) { .container .login-wrapper .login-confirm label { line-height: 1; width: 50%; } }
+
+.container .login-wrapper .login-confirm input { display: inline-block; width: 30px; height: 15px; }
+
+.container .login-wrapper .login-confirm button { display: inline-block; margin: 0 0 0 auto; border: none; cursor: pointer; }
+
+.container .login-wrapper .login-confirm button:focus { outline: none !important; }
 
 /*# sourceMappingURL=style.css.map */

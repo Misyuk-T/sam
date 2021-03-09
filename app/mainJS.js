@@ -1,9 +1,11 @@
 $(document).ready(function () {
+    console.log('ready')
 
 //fixed header (margin-top for header intro)
 //===========================
     let header = $('.header');
     if (header.length) {
+        console.log('header')
 
         let headerIntro = $('.header-intro');
         let headerHeight = header.outerHeight();
@@ -71,6 +73,7 @@ $(document).ready(function () {
 
 let getCredit = $('.get-credit')
     if (getCredit.length) {
+        console.log('stages')
 
         let stageItem = $(".stage-item");
         let stageItemActive = 'stage-item__active'
@@ -89,7 +92,8 @@ let getCredit = $('.get-credit')
     //calculator
 //===========================
     let creditCalculator = $('.credit-calculator')
-    if (creditCalculator) {
+    if (creditCalculator.length) {
+        console.log('calculator')
 
         let confirmMoney = $(".confirm-money")
         let rangeSum = $(".range-of-sum");
@@ -178,6 +182,7 @@ let getCredit = $('.get-credit')
 //===========================
     let videoWindow = $('.video');
     if (videoWindow.length) {
+        console.log('video')
 
         let video = $('.video')[0];
         video.onloadedmetadata = function () {

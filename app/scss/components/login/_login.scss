@@ -1,0 +1,239 @@
+.container {
+
+  .login {
+    display: flex;
+    margin: 180px 0 40px;
+  }
+
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+
+    background: $light-grey;
+    border-radius: 20px;
+
+    @media (max-width: 800px) {
+      width: 90%;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .btns-switch {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+      margin-bottom: 90px;
+
+      @media (max-width: 1100px) {
+        margin-bottom: 60px;
+      }
+
+      .btn-switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        width: 20%;
+        height: 150%;
+
+        border: 1px solid #333;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 0;
+        transition: 0.5s;
+
+        cursor: pointer;
+
+        @media (max-width: 800px) {
+          width: 110px;
+          height: 30px;
+        }
+
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          background: $light-grey;
+          z-index: -1;
+          transition: 0.5s;
+        }
+
+        &::before {
+          height: 110%;
+          width: 70%;
+        }
+
+        &::after {
+          width: 102%;
+          height: 70%;
+        }
+
+        &:hover {
+          background: #fff;
+        }
+
+        &:hover::before {
+          width: 0;
+          background: #fff;
+        }
+
+        &:hover::after {
+          height: 0;
+          background: #fff;
+        }
+
+        .switch-sign {
+          color: $black;
+          span {
+            @extend %medium-bold;
+            text-transform: uppercase;
+            user-select: none;
+
+            @media (max-width: 800px) {
+             font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+
+    .input-container {
+      position: relative;
+      width: 90%;
+      margin: 0 auto 60px;
+
+      @media (max-width: 800px) {
+        width: 100%;
+          margin-bottom: 30px;
+      }
+
+      input {
+        display: block;
+
+        width: 100%;
+        height: 64px;
+
+        padding-left: 15px;
+
+        @extend %big-text;
+        font-weight: 300;
+        color: $black;
+
+        outline: none;
+        border: 1px solid $light-grey;
+        border-radius: 5px;
+        transition: all .2s;
+
+        @media (max-width: 800px) {
+          height: 44px;
+        }
+
+        &:hover {
+          border: 1px solid $black;
+        }
+
+        &:focus ~ label {
+          top: -50%;
+          left: -2%;
+          color: $black;
+
+          transition: all .4s;
+
+          @media (max-width: 800px) {
+            top: -60%;
+          }
+        }
+
+        &:focus:invalid {
+          border: 1px solid red;
+          transition: all .2s;
+        }
+
+        &:valid {
+          border: 1px solid $green;
+          transition: all .2s;
+        }
+      }
+
+      label {
+        display: inline-block;
+
+        position: absolute;
+        top: -20%;
+        left: 0;
+
+        padding: 3px 15px;
+        margin: 0 0 2px 25px;
+
+        @extend %medium-text;
+        color: black;
+        font-size: 16px;
+
+        background: #0ed193;
+        border-radius: 5px;
+        transition: all .4s;
+
+        @media (max-width: 800px) {
+          font-size: 12px;
+          top: -30%;
+        }
+      }
+
+      input.username {
+      }
+
+      input.password {
+      }
+
+    }
+
+
+    .login-confirm {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      flex-wrap: wrap;
+
+      margin: 0 auto 0 0;
+      width: 100%;
+
+      label {
+        margin-left: 5px;
+
+        @media (max-width: 500px) {
+          line-height: 1;
+          width: 50%;
+        }
+      }
+
+      input {
+        display: inline-block;
+        width: 30px;
+        height: 15px;
+      }
+
+      button {
+        display: inline-block;
+
+        margin: 0 0 0 auto;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+          outline: none !important;
+        }
+
+        @media (max-width: 500px) {
+
+        }
+      }
+    }
+  }
+}
