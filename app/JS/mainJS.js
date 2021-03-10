@@ -1,11 +1,9 @@
 $(document).ready(function () {
-    console.log('ready')
 
 //fixed header (margin-top for header intro)
 //===========================
     let header = $('.header');
     if (header.length) {
-        console.log('header')
 
         let headerIntro = $('.header-intro');
         let headerHeight = header.outerHeight();
@@ -68,12 +66,12 @@ $(document).ready(function () {
         })
     }
 
+
+
     //stages
 //===========================
-
 let getCredit = $('.get-credit')
     if (getCredit.length) {
-        console.log('stages')
 
         let stageItem = $(".stage-item");
         let stageItemActive = 'stage-item__active'
@@ -89,11 +87,11 @@ let getCredit = $('.get-credit')
         })
     }
 
+
     //calculator
 //===========================
     let creditCalculator = $('.credit-calculator')
     if (creditCalculator.length) {
-        console.log('calculator')
 
         let confirmMoney = $(".confirm-money")
         let rangeSum = $(".range-of-sum");
@@ -146,7 +144,6 @@ let getCredit = $('.get-credit')
         }
 
         // значення інпута в слайдер + валідація
-
         function keyUp(inputName, sliderName, min, max, size, step) {
             let inputValue = inputName.val();
             let sum = inputValue.replace(/\s/g, ''); // беру без пробілів цифри
@@ -181,10 +178,11 @@ let getCredit = $('.get-credit')
 //MEDIA PLAYER
 //===========================
     let videoWindow = $('.video');
+
     if (videoWindow.length) {
-        console.log('video')
 
         let video = $('.video')[0];
+
         video.onloadedmetadata = function () {
 // запускаєм плеер тільки при отриманні метадати
 
@@ -193,7 +191,6 @@ let getCredit = $('.get-credit')
             let playIcon = $('.play-icon')
 
             function triggerVideo() { // button play/pause
-
                 if (video.paused || video.ended) {
                     video.play()
                 } else {
@@ -201,7 +198,7 @@ let getCredit = $('.get-credit')
                 }
             }
 
-            function playPauseSvg() {
+            function playPauseSvg() { // icon svg play/pause
                 if (video.paused || video.ended) {
                     btnSvg.attr({href: '#play'})
                 } else {

@@ -69,7 +69,7 @@
         left: 50%;
         top: 50%;
 
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -43%, 0);
         color: black;
         cursor: pointer;
 
@@ -193,6 +193,7 @@
         width: 100%;
 
         margin: 0 auto;
+        background: $light-grey;
         cursor: pointer;
 
         .ui-state-default {
