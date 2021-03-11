@@ -178,100 +178,59 @@ let getCredit = $('.get-credit')
 //MEDIA PLAYER
 //===========================
     let videoWindow = $('.video');
+    let video = $('.video')[0];
+
+    let btn = $('.video-btn');
+    let btnSvg = $('.play-svg')
+    let playIcon = $('.play-icon')
+
+    let videoVolume = $(".video-volume");
+    let videoDurationUI = $(".video-duration");
+    let spanTime = $(".current-time")
+    let spanMaxTime = $(".max-time")
+    let btnVolume = $('.volume-icon')
+    let volumeSvg = $(`.volume-svg`)
+
+// check for media block length
+// ==================
 
     if (videoWindow.length) {
+        video.oncanplay =  initialVideoPlayer();
+        video.load(function (){
+            initialVideoPlayer();
+        })
+    }
 
-        let video = $('.video')[0];
+//=============
 
-        video.onloadedmetadata = function () {
-// запускаєм плеер тільки при отриманні метадати
 
-            let btn = $('.video-btn');
-            let btnSvg = $('.play-svg')
-            let playIcon = $('.play-icon')
+// initial custom video player
+// ==================
+         function initialVideoPlayer() {
+             videoWindow.removeAttr("controls");
 
-            function triggerVideo() { // button play/pause
-                if (video.paused || video.ended) {
-                    video.play()
-                } else {
-                    video.pause()
-                }
-            }
-
-            function playPauseSvg() { // icon svg play/pause
-                if (video.paused || video.ended) {
-                    btnSvg.attr({href: '#play'})
-                } else {
-                    btnSvg.attr({href: '#pause'})
-                }
-            }
-
-            function toggleMedia() {
-                btn.toggleClass('video-btn-hide')
-                videoWindow.toggleClass('video-blur')
-
-            }
-
+ // click and end video events
+// ==================
             btn.click(function () {
-                triggerVideo();
-                toggleMedia();
-                playPauseSvg()
+                videoEvents();
             });
 
             videoWindow.click(function () {
-                triggerVideo();
-                toggleMedia();
-                playPauseSvg();
+                videoEvents();
             })
 
             playIcon.click(function () {
-                triggerVideo();
-                toggleMedia();
-                playPauseSvg();
+                videoEvents();
             })
 
+             video.onended = function () {
+                 toggleMedia();
+                 playPauseSvg();
+             }
+
 
 // volume slider
-
-            let videoVolume = $(".video-volume");
-            let videoDurationUI = $(".video-duration");
-            let spanTime = $(".current-time")
-            let spanMaxTime = $(".max-time")
-            let btnVolume = $('.volume-icon')
-            let volumeSvg = $(`.volume-svg`)
-
-            spanMaxTime.text(secondsToTime(video.duration));
-
-            function secondsToTime(time) {
-                let h = Math.floor(time / (60 * 60)),
-                    dm = time % (60 * 60),
-                    m = Math.floor(dm / 60),
-                    ds = dm % 60,
-                    s = Math.ceil(ds);
-                if (s === 60) {
-                    s = 0;
-                    m = m + 1;
-                }
-                if (s < 10) {
-                    s = '0' + s;
-                }
-                if (m === 60) {
-                    m = 0;
-                    h = h + 1;
-                }
-                if (m < 10) {
-                    m = '0' + m;
-                }
-                if (h === 0) {
-                    fulltime = m + ':' + s;
-                } else {
-                    fulltime = h + ':' + m + ':' + s;
-                }
-                return fulltime;
-            }
-
-// volume slider
-
+//================
             videoVolume.slider({
                 animate: "fast",
                 range: "min",
@@ -294,31 +253,33 @@ let getCredit = $('.get-credit')
             let volumeBeforeClick = videoVolume.slider('value');
             svgChange();
 
-            btnVolume.click(function () {
-                iconMuteUnmute();
-                svgChange();
-            })
 
-            function iconMuteUnmute() {
-                if (videoVolume.slider('value') > 0) {
-                    videoVolume.slider("value", 0);
-                } else {
-                    videoVolume.slider("value", volumeBeforeClick);
-                }
-            }
+             btnVolume.click(function () {
+                 iconMuteUnmute();
+                 svgChange();
+             })
 
-            function svgChange() {
-                if (video.volume === 0) {
-                    volumeSvg.attr({href: `#volume-0`})
-                } else if (0.50 > video.volume > 0) {
-                    volumeSvg.attr({href: `#volume-1`})
-                } else {
-                    volumeSvg.attr({href: `#volume-2`})
-                }
-            }
+             function iconMuteUnmute() {
+                 if (videoVolume.slider('value') > 0) {
+                     videoVolume.slider("value", 0);
+                 } else {
+                     videoVolume.slider("value", volumeBeforeClick);
+                 }
+             }
+
+             function svgChange() {
+                 if (video.volume === 0) {
+                     volumeSvg.attr({href: `#volume-0`})
+                 } else if (0.50 > video.volume > 0) {
+                     volumeSvg.attr({href: `#volume-1`})
+                 } else {
+                     volumeSvg.attr({href: `#volume-2`})
+                 }
+             }
+
 
 // duration slider
-
+//===================
             videoDurationUI.slider({
                 animate: "fast",
                 range: "min",
@@ -331,20 +292,81 @@ let getCredit = $('.get-credit')
                     video.currentTime = ui.value
                 }
             });
+             spanMaxTime.text(secondsToTime(video.duration));
 
             video.ontimeupdate = function () {
                 videoDurationUI.slider('value', this.currentTime)
                 spanTime.text(secondsToTime(videoDurationUI.slider("value")));
             };
 
+        }//end initial player
+        //======================
 
-            video.onended = function () {
-                toggleMedia();
-                playPauseSvg();
-            }
 
-        }//end player metadata function
-    } //end player function
+// play/pause events (play/stop video, change svg icon, blur window)
+//======================
+
+    function triggerVideo() {
+        if (video.paused || video.ended) {
+            video.play()
+        } else {
+            video.pause()
+        }
+    }
+
+    function playPauseSvg() {
+        if (video.paused || video.ended) {
+            btnSvg.attr({href: '#play'})
+        } else {
+            btnSvg.attr({href: '#pause'})
+        }
+    }
+
+    function toggleMedia() {
+        btn.toggleClass('video-btn-hide')
+        videoWindow.toggleClass('video-blur')
+
+    }
+
+    function videoEvents() {
+        triggerVideo();
+        toggleMedia();
+        playPauseSvg();
+    }
+
+
+// second to time to string
+//======================
+
+    function secondsToTime(time) {
+        let h = Math.floor(time / (60 * 60)),
+            dm = time % (60 * 60),
+            m = Math.floor(dm / 60),
+            ds = dm % 60,
+            s = Math.ceil(ds);
+        if (s === 60) {
+            s = 0;
+            m = m + 1;
+        }
+        if (s < 10) {
+            s = '0' + s;
+        }
+        if (m === 60) {
+            m = 0;
+            h = h + 1;
+        }
+        if (m < 10) {
+            m = '0' + m;
+        }
+        if (h === 0) {
+            fulltime = m + ':' + s;
+        } else {
+            fulltime = h + ':' + m + ':' + s;
+        }
+        return fulltime;
+    }
+
+
 
 
 }); //end ready page function
